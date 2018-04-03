@@ -1,0 +1,36 @@
+{
+  "scripts": {
+    "build": "ebam",
+    "test": "echo \"no test\""
+  },
+  "name": "setter-mixin",
+  "description": "Mixin a setter, and getter",
+  "keywords": [
+    "set",
+    "get",
+    "setter",
+    "getter",
+    "mixin",
+    "accessors"
+  ],
+  "version": "1.0.0",
+  "license": "MIT",
+  "ebam": {
+    "entry": "src/index.js",
+    "transforms": {
+      "dangerousForOf": false,
+      "dangerousTaggedTemplateString": false
+    },
+    "test": {
+      "dest": "test/code.js",
+      "src": "test/src.js"
+    }
+  },
+  "author": "Quentin Engles <hollowdoor99@gmail.com> (https://hollowdoor.github.io)",
+  "main": "dist/bundle.js",
+  "jsnext:main": "dist/bundle.es.js",
+  "module": "dist/bundle.es.js",
+  "dependencies": {
+    "raw-object": "^1.0.0"
+  }
+}
