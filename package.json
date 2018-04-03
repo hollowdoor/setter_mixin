@@ -32,5 +32,17 @@
   "module": "dist/bundle.es.js",
   "dependencies": {
     "raw-object": "^1.0.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hollowdoor/setter_mixin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hollowdoor/setter_mixin/issues"
+  },
+  "homepage": "https://github.com/hollowdoor/setter_mixin#readme"
 }
