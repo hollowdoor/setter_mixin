@@ -236,10 +236,10 @@ function get(src, properties, defaults, masks){
     return value;
 }
 
-function setAll(obj, values, defaults){
+function setAll(obj, values, defaults, masks){
     var props = Object.keys(values);
     for(var i=0; i<props.length; i++){
-        set(props[i], values[props[i]], defaults);
+        set(obj, props[i], values[props[i]], defaults, masks);
     }
 }
 
@@ -337,6 +337,11 @@ var MyThing = function MyThing(){
     this['dotted.prop'] = '';
     this.set('integer', 3333);
     this.set('[dotted.prop]', "I'm dotted");
+
+    this.setAll({
+        'ten': 10,
+        'twenty': 20
+    });
 };
 
 mixinSetter(MyThing.prototype, {
@@ -381,6 +386,8 @@ console.log(thing.get('sub.value'));
 
 thing.set('some.value', 42);
 console.log(thing.get('some.value'));
+
+console.log(thing.get('ten'));
 
 }());
 //# sourceMappingURL=code.js.map

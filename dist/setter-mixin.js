@@ -236,10 +236,10 @@ function get(src, properties, defaults, masks){
     return value;
 }
 
-function setAll(obj, values, defaults){
+function setAll(obj, values, defaults, masks){
     var props = Object.keys(values);
     for(var i=0; i<props.length; i++){
-        set(props[i], values[props[i]], defaults);
+        set(obj, props[i], values[props[i]], defaults, masks);
     }
 }
 

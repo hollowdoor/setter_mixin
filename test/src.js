@@ -10,6 +10,11 @@ class MyThing {
         this['dotted.prop'] = '';
         this.set('integer', 3333);
         this.set('[dotted.prop]', "I'm dotted");
+
+        this.setAll({
+            'ten': 10,
+            'twenty': 20
+        });
     }
 }
 
@@ -52,3 +57,5 @@ console.log(thing.get('sub.value'));
 
 thing.set('some.value', 42);
 console.log(thing.get('some.value'));
+
+console.log(thing.get('ten'));
